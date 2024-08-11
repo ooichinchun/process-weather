@@ -1,6 +1,11 @@
 # Repository for downloading and pre-processing Himawari and other data sources
 
-Scripts for downloading and processing satellite and other data
+Scripts for downloading and processing satellite and other data are collected here.
+
+In general, the scripts are meant for sequential processing:
+1. Loading raw data from individual files into a single month (by categories)
+2. Interpolation and croppin of the raw data into smaller spatial regions (but still larger than TMA)
+3. Additional processing as-required (e.g. to predict different time ahead)
 
 ### Scripts for downloading Himawari Satellite data
 
