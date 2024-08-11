@@ -8,8 +8,6 @@ The following scripts have been provided by Vignesh Raman based on prior work fr
 
 Libraries required are per the above Github link. 
 
-<br>
-
 ### Instructions for Use
 
 1. Navigate to ./data_preprocessing/ folder
@@ -19,9 +17,10 @@ Libraries required are per the above Github link.
 
 
 Arguments: </br>
-The numbers have to be given in this format. For example, if we need to download Band 15 we need to give the argument as follows: </br>
-	chn - "TIR"  (set as "TIR" by default) </br>
-	num - 3  (according to Table in Reference Bands below) </br>
+The numbers have to be given in this format. For example, if we need to download Band 15 we need to give the argument as follows: 
+
+&nbsp;&nbsp; chn - "TIR"  (set as "TIR" by default) </br>
+&nbsp;&nbsp; num - 3  (according to Table in Reference Bands below) </br>
 	
 start_date - date from which the data has to be downloaded </br>
 end_date - date until which the data has to be downloaded </br>
