@@ -4,9 +4,9 @@ The following scripts have been provided by Vignesh Raman based on prior work fr
 
 [https://github.com/zxdawn/Himawari-8-gridded](https://github.com/zxdawn/Himawari-8-gridded)
 
-### Requirements:
-
 Libraries required are described in the above Github link. 
+
+<br>
 
 ### Instructions for use:
 
