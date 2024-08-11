@@ -18,8 +18,8 @@ Libraries required are per the above Github link.
 -----------------------------------
 [SIR] | 01:Band05 02:Band06
 -----------------------------------
-[TIR] | 01:Band13 02:Band14 03:Band15 04:Band16 05:Band07
-      | 06:Band08 07:Band09 08:Band10 09:Band11 10:Band12
+[TIR] | 01:Band13 02:Band14 03:Band15 04:Band16 05:Band07 </br>
+        06:Band08 07:Band09 08:Band10 09:Band11 10:Band12
 -----------------------------------
 
 
