@@ -32,9 +32,16 @@ save_path - data will be stored under this directory (adjust through --data or d
 
 ### Reference Bands:
 
+
 | Band Type | Bands |
 |-----------|------------------------------------------------|
 | [EXT]     | 01:Band03                                      |
 | [VIS]     | 01:Band01 02:Band02 03:Band04                  |
 | [SIR]     | 01:Band05 02:Band06                            |
 | [TIR]     | 01:Band13 02:Band14 03:Band15 04:Band16 <br>   05:Band07 06:Band08 07:Band09 08:Band10 <br> 09:Band11 10:Band12 |
+
+
+### Sample commands:
+
+Sample commands for the 4 (and 3) important bands are:
+
