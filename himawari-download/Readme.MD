@@ -12,11 +12,10 @@ Libraries required are per the above Github link.
 
 ### Instructions for Use
 
-1. Navigate to src/data_preprocessing
-2. Run the following line but change the band and date to relevant parameters 
+1. Navigate to ./data_preprocessing/ folder
+2. Run the following line but change the band and date to relevant parameters </br>
+&nbsp;&nbsp;&nbsp;&nbsp; python main.py --band 10 --sdate '2023-11-01-00:00' --edate '2023-11-30-23:55' </br>
 3. Take note that the intermediate files will over-write each other if multiple bands are being downloaded simultaneously to the same data directory
-   
-python main.py --band 10 --sdate '2023-11-01-00:00' --edate '2023-11-30-23:55'
 
 
 Arguments: </br>
