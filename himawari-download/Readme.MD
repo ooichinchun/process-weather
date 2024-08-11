@@ -6,21 +6,23 @@ The following scripts have been provided by Vignesh Raman based on prior work fr
 
 ### Requirements:
 
-Libraries required are per the above Github link. 
+Libraries required are described in the above Github link. 
 
-### Instructions for Use
+### Instructions for use:
 
-1. Navigate to ./data_preprocessing/ folder
+1. Navigate to ./data_preprocessing/ 
 2. Run the following line but change the band and date to relevant parameters </br>
 &nbsp;&nbsp;&nbsp;&nbsp; python main.py --band 10 --sdate '2023-11-01-00:00' --edate '2023-11-30-23:55' </br>
 3. Take note that the intermediate files will over-write each other if multiple bands are being downloaded simultaneously to the same data directory
 
 
 Arguments: </br>
-The numbers have to be given in this format. For example, if we need to download Band 15 we need to give the argument as follows: 
+The numbers have a pre-defined format. 
 
-&nbsp;&nbsp; chn - "TIR"  (set as "TIR" by default) </br>
-&nbsp;&nbsp; num - 3  (according to Table in Reference Bands below) </br>
+For example, if we need to download Band 15 we need to give the argument as follows: 
+
+chn - "TIR"  (set as "TIR" by default) </br>
+num - 3  (according to Table in Reference Bands below) </br>
 	
 start_date - date from which the data has to be downloaded </br>
 end_date - date until which the data has to be downloaded </br>
