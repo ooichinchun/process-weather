@@ -1,4 +1,6 @@
-## Script to download Himawari and process Himawari satellite data have been modified by Vignesh Raman based on prior work from the following Github link
+## Script to download Himawari satellite data 
+
+The following scripts have been provided by Vignesh Raman based on prior work from the following Github link
 
 [https://github.com/zxdawn/Himawari-8-gridded](https://github.com/zxdawn/Himawari-8-gridded)
 
