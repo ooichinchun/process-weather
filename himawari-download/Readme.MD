@@ -32,7 +32,17 @@ save_path - data will be stored under this directory (adjust through --data or d
 
 Sample commands for the 4 (and 3) important bands are:
 
-<br>
+4 bands in bandopt0: </br>
+Band 13 --> python main.py --band 1 --sdate '2024-01-01-00:00' --edate '2024-01-31-23:55' </br>
+Band 8  --> python main.py --band 6 --sdate '2024-01-01-00:00' --edate '2024-01-31-23:55' </br>
+Band 16 --> python main.py --band 4 --sdate '2024-01-01-00:00' --edate '2024-01-31-23:55' </br>
+Band 10 --> python main.py --band 8 --sdate '2024-01-01-00:00' --edate '2024-01-31-23:55' </br>
+
+3 bands in bandopt1: </br>
+Band 11 --> python main.py --band 9 --sdate '2024-01-01-00:00' --edate '2024-01-31-23:55' </br>
+Band 14 --> python main.py --band 2 --sdate '2024-01-01-00:00' --edate '2024-01-31-23:55' </br>
+Band 15 --> python main.py --band 3 --sdate '2024-01-01-00:00' --edate '2024-01-31-23:55' </br>
+
 
 ### Reference Bands:
 
