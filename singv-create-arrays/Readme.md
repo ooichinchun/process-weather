@@ -7,13 +7,11 @@ The script processes the data in SINGV-DA into different numpy arrays (split by 
 The data is stored with the following <b>hard-coded</b> indexing:<br>
 &nbsp;&nbsp;&nbsp;&nbsp; [SINGV-Start-Date, NWP-hour, Variable Index, 0:964,0:1016]
 
-
-
-The last two indices follow the SINGV-DA domain size (initial XXX degree spacing) to:</br>
-&nbsp;&nbsp;&nbsp;&nbsp; Lat: -9.99 to 14.00
-&nbsp;&nbsp;&nbsp;&nbsp; Long: 90.50 to 125.49
+The last two indices follow the SINGV-DA domain size (initial 1.5 km spacing) to:</br>
+&nbsp;&nbsp;&nbsp;&nbsp; Lat: -5.5 to 7.5
+&nbsp;&nbsp;&nbsp;&nbsp; Long: 94.80 to 108.5
   
-This creates 964 x 1016 grid points.
+This creates 964 x 1016 grid points with 1.5 km spacing between grid points.
   
 <br>
 
@@ -28,36 +26,26 @@ Additional months to be processed include Mar 2024 to Jul 2024.
 ### Instructions for use:
 
 1. Update header and save_folder in qconvertsingvfullbatch_v1.py. </br>
-&nbsp;&nbsp;&nbsp;&nbsp; header is where the SINGV-DA nc data files are stored (file directory should be /mnt/data/mss_datasets/singvda_level1_wmc/ format)</br>
+&nbsp;&nbsp;&nbsp;&nbsp; header is where the SINGV-DA nc data files are stored (file directory should be /mnt/data/mss_datasets/singvda_level1_wmc/)</br>
 &nbsp;&nbsp;&nbsp;&nbsp; save_folder is where the numpy arrays will be saved (outputs currently in /mnt/data/co-develop/data/singv/correct_spin3_full/) </br>
 
-2. Run the following line but change the YYYY, MM, and band option (0 or 1) to relevant parameters </br>
-&nbsp;&nbsp;&nbsp;&nbsp; python qconverthimaw.py 2024 01 0 </br>
+2. Run the following line but change the YYYY and MM to relevant parameters </br>
+&nbsp;&nbsp;&nbsp;&nbsp; python qconvertsingvfullbatch_v1.py 2024 01 </br>
+
 3. Note that the files will be written to the directory as set in save_folder (make sure to check the file directory is updated)
 
-<b>Missing data (or days) in the dataset are replaced by -999 values for easy filtering. </b>
+<b>Missing data in the dataset is replaced by -999 values for easy filtering. </b>
 
-### Numpy array band Information:
+### Reference Groups for Variable Index:
 
+| 8 Variable Groups       | Order                                                                                                                                                  |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Reflectivity (2 variables) | 0: radar_reflectivity_at_1km_agl<br>1: total_radar_reflectivity_max_in_column                                                                       |
+| Rainfall (3 variables)     | 0: precipitation_rate<br>1: rainfall_accumulation-PT01H<br>2: total_cloud_amount_max_random_overlap                                                  |
+| U-wind (4 variables)       | u_wind_on_pressure_levels<br>Larger index is higher height (lower pressure)                                                                         |
+| V-wind (4 variables)       | v_wind_on_pressure_levels<br>Larger index is higher height (lower pressure)                                                                         |
+| Humidity (5 variables)     | 0: relative_humidity_at_screen_level<br>1-4: relative_humidity_on_pressure_levels<br>Larger index is higher height (lower pressure)                  |
+| Temperature (5 variables)  | 0: temperature_at_screen_level<br>1-4: temperature_on_pressure_levels<br>Larger index is higher height (lower pressure)                             |
+| Other Winds (3 variables)  | 0: wind_direction_at_10m<br>1: wind_gust_at_10m-PT01H<br>2: wind_speed_at_10m                                                                      |
+| Radiation (2 variables)    | 0: total_downward_surface_shortwave_flux<br>1: toa_outgoing_longwave_flux                                                                           |
 
-4 bands in bandopt0 (sorted by IR band num): </br>
-[0] --> Band 13 --> band 1 </br>
-[1] --> Band 16 --> band 4 </br>
-[2] --> Band 8  --> band 6 </br>
-[3] --> Band 10 --> band 8 </br>
-
-3 bands in bandopt1 (sorted by IR band num): </br>
-[0] --> Band 14 --> band 2 </br>
-[1] --> Band 15 --> band 3 </br>
-[2] --> Band 11 --> band 9 </br>
-
-
-### Reference Bands:
-
-
-| Band Type | Bands |
-|-----------|------------------------------------------------|
-| [EXT]     | 01:Band03                                      |
-| [VIS]     | 01:Band01 02:Band02 03:Band04                  |
-| [SIR]     | 01:Band05 02:Band06                            |
-| [TIR]     | 01:Band13 02:Band14 03:Band15 04:Band16 <br>   05:Band07 06:Band08 07:Band09 08:Band10 <br> 09:Band11 10:Band12 |
