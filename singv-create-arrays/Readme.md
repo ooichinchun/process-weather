@@ -21,6 +21,8 @@ Current data has been downloaded for Dec 2023 to Feb 2024 and processed (in /mnt
 
 Additional months to be processed include Mar 2024 to Jul 2024.
 
+A second version of the script 'qconvertsingvfullbatch_v2.py' was created as the variable names and organization of the .nc files was changed. Please use this updated version for subsequent processing.
+
 <br>
 
 ### Instructions for use:
