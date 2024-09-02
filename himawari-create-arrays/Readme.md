@@ -4,7 +4,7 @@ The following script 'qconverthimaw.py' is meant to pre-process Himawari downloa
 
 The script processes the data in individual bands into two numpy arrays (split by bands as described below) and processes the data by individual months.
 
-The data is stored with the following indexing:<br>
+The data is stored with the following <b>hard-coded</b> indexing:<br>
 &nbsp;&nbsp;&nbsp;&nbsp; [Time Index, Band Index, 2299:3501, 274:2025]
 
 The last two indices have been adjusted to trim the domain size (initial 0.02 degree spacing) to:</br>
