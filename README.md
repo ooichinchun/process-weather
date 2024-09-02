@@ -15,7 +15,7 @@ Scripts and instructions for use in order to download the different Himawari ban
 
 Scripts and instructions for use in order to pre-process the Himawari bands are provided and described. The script collects the bands for a single month and creates 2 numpy arrays per month (with 4 and 3 bands respectively) for inclusion.
 
-### Scripts for processing Sat-TS labels
+### Scripts for pre-processing Sat-TS labels
 
 Scripts and instructions for use in order to load and save the Sat-TS labels from images are provided and described. The script loads the Sat-TS images for a single month and creates a numpy array for the month.
 
