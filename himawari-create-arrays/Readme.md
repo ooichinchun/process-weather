@@ -1,10 +1,8 @@
 ## Script to pre-process raw Himawari satellite data 
 
-The following scripts have been tested on Himawari downloaded output as per other download scripts.
+The following script 'qconverthimaw.py' is meant to pre-process Himawari downloaded output.
 
-The downloaded data is put into two sets of data and split by months.
-
-Current data has been downloaded for Dec 2023 to Feb 2024 (To be Updated).
+The script processes the data in individual bands into two numpy arrays (split by bands as described below) and processes the data by individual months.
 
 Missing data (or days) in the dataset are replaced by -999 values for easy filtering.
 
@@ -19,25 +17,24 @@ This creates approximately 1200 x 1750 grid points.
   
 <br>
 
+### Current Processing status
+
+Current data has been downloaded for Dec 2023 to Feb 2024 and processed (in /mnt/data/co-develop/data/satel/) 
+
+Additional months to be processed include Mar 2024 to Jul 2024.
+
+<br>
+
 ### Instructions for use:
 
-1. Navigate to folder 
-2. Run the following line but change the band option and date to relevant parameters </br>
-&nbsp;&nbsp;&nbsp;&nbsp; python main.py --band 10 --sdate '2023-11-01-00:00' --edate '2023-11-30-23:55' </br>
-3. Take note that the files will be written to the following directory as currently set
+1. Update data_folder and save_folder in qconverthimaw.py. </br>
+&nbsp;&nbsp;&nbsp;&nbsp; data_folder is where the raw Himawari data files are stored (file directory should be /himawari/YYYY/MM/ format)</br>
+&nbsp;&nbsp;&nbsp;&nbsp; save_folder is where the numpy arrays will be saved (outputs currently in /mnt/data/co-develop/data/satel/) </br>
 
+2. Run the following line but change the YYYY, MM, and band option (0 or 1) to relevant parameters </br>
+&nbsp;&nbsp;&nbsp;&nbsp; python qconverthimaw.py 2024 01 0 </br>
+3. Note that the files will be written to the directory as set in save_folder (make sure to check the file directory is updated)
 
-Arguments: </br>
-The numbers have a pre-defined format. 
-
-For example, if we need to download Band 15 we need to give the argument as follows: 
-
-chn - "TIR"  (set as "TIR" by default) </br>
-num - 3  (according to Table in Reference Bands below) </br>
-	
-start_date - date from which the data has to be downloaded </br>
-end_date - date until which the data has to be downloaded </br>
-save_path - data will be stored under this directory (adjust through --data or directly in parser)
 
 ### Numpy array band Information:
 
