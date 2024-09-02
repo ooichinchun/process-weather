@@ -23,6 +23,10 @@ Scripts and instructions for use in order to load and save the Sat-TS labels fro
 
 Scripts and instructions for use in order to pre-process the radar data are provided and described.
 
+### Scripts for processing Radar-TS labels
+
+Scripts and instructions for use in order to load and save the Radar-TS labels from images are provided and described. The script loads the Radar-TS images for a single month and creates a numpy array for the month.
+
 ### Scripts for processing NWP data
 
 Scripts and instructions for use in order to pre-process NWP data are provided and described.
