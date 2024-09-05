@@ -5,7 +5,7 @@ There are 5 scripts:
 2. downsample_radarTS.py
 3. downsample_satel.py
 4. downsample_sat_ts.py
-5. downsample_singv.py
+5. downsample_singv.py (updated to downsample_singv_all_time.py for only spatial downsampling)
 
 
 The script processes the data by individual months and crops everything back to 128 x 128 within the radar domain.
@@ -83,9 +83,11 @@ We use this radar grid to interpolate the satellite and SINGV data to a consiste
 &nbsp;&nbsp;&nbsp;&nbsp; radar_grid_folder is where the radar grid and radar data files are stored (file directory should be /mnt/data/co-develop/data/radar/)</br>
 &nbsp;&nbsp;&nbsp;&nbsp; save_folder is where the downsampled array will be saved (outputs currently in /mnt/data/co-develop/downsample_data/singv/) </br>
 
-2. Run the following line but change YYYYMM to relevant parameters. An additional argument corresponds to the SINGV variable group. </br>
+2. Run the following line but change YYYYMM to relevant parameters. An additional argument corresponds to the SINGV variable group (single digit only). </br>
 &nbsp;&nbsp;&nbsp;&nbsp; python downsample_singv.py 202401 0 </br>
 
 3. Note that the files will be written to the directory as set in save_folder (make sure to check the file directory is updated)
+
+The latest version only downsamples in space but not in time --> downsample_singv_all_time.py --> Use this instead for post-hoc time extraction
 
 #<b>Missing data (or corrupted data) in the dataset may be replaced by -555 values for easy filtering. No -555 should appear though. </b>
